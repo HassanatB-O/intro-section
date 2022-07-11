@@ -1,0 +1,224 @@
+/* Dropdown-menu starts */
+#features-ul{
+    display: none;
+    margin-top: 20px;
+    position: absolute;
+}
+#company-ul{
+    display: none;
+    margin-top: 20px;
+    position: absolute;
+    margin-left: 135px;
+}
+#features:hover + #features-ul, #company:hover + #company-ul{
+    display: block;
+}
+#arrow-down{
+    display: none;
+}
+#features:hover #arrow-down, #company:hover #arrow-down{
+    display: inline-block;
+}
+#features:hover #arrow-up, #company:hover #arrow-up{
+    display: none;
+}
+li{
+    list-style-type: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+/* Dropdown-menu ends */
+/* Hamburger-menu starts */
+#icon-menu{
+    height: 20px;
+    width: 35px;
+    display: none;
+}
+#icon-close{
+    float: right;
+}
+#nav{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    line-height: 2.5;
+    padding: 20px;
+    min-height: 100vh;
+    display: none;
+    position: fixed;
+    font-size: 20px;
+    width: 60%;
+    right: 0;
+}
+#nav #details{
+    display: flex;
+    flex-direction: column;
+    color: hsl(0, 0%, 41%);
+    clear: right;
+    width: 100%;
+}
+#nav #login-btn{
+    background-color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#nav #register-btn{
+    background-color: hsl(0, 0%, 100%);
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+#nav #buttons{
+    display: flex;
+    flex-direction: column;
+}
+/* Hamburger-menu ends */
+*{
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+}
+body{
+    background-color:  hsl(0, 0%, 98%);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    color: hsl(0, 0%, 41%);
+}
+#details{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+#features-ul, #company-ul{
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+    line-height: 1.7;
+    border-radius: 8px;
+    text-indent: 3px;
+}
+#container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+#login-btn{
+    border: none;
+    background-color: hsl(0, 0%, 98%);
+    cursor: pointer;
+    color: hsl(0, 0%, 41%);
+}
+#login-btn:hover, li:hover{
+    color: hsl(0, 0%, 8%);
+}
+#register-btn{
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+    margin-left: 12px;
+    padding: 5px;
+}
+#register-btn:hover{
+    color: hsl(0, 0%, 8%);
+    border: 2px solid hsl(0, 0%, 8%);
+}
+#description{
+    padding: 50px;
+}
+h1{
+    font-size: 50px;
+    color: hsl(0, 0%, 8%);
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+p{
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+    font-size: 18px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+#learn-btn{
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    width: 150px;
+    margin: 20px 0 50px 0;
+}
+#learn-btn:hover{
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+#icons{
+    margin-top: 70px;
+}
+#hero-img-desktop{
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 640px;
+}
+#hero-img-mobile{
+    display: none;
+}
+@media screen and (max-width: 800px){
+    nav #details, nav #buttons{
+        display: none;
+    }
+    #container{
+        flex-direction: column-reverse;
+    }
+    #hero-img-mobile{
+        display: block;
+    }
+    #hero-img-desktop{
+        display: none;
+    }
+    #description{
+        padding: 20px;
+        margin-top: 20px;
+    }
+    #nav #company-ul{
+        margin-top: 70px;
+        margin-left: 10px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        width: 100%;
+    }
+    #icons{
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    #learn-btn{
+        margin-bottom: 0px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    #icon{
+        width: 70px;
+        height: 25px;
+        margin-left: 6px;
+    }
+    #icon-menu{
+        display: block;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 800px){
+    #icon{
+        width: 110px;
+        height: 40px;
+    }
+}
